@@ -10,6 +10,7 @@ services:
       - ./server/lucasratiaray.fr.conf:/etc/apache2/sites-available/lucasratiaray.fr.conf
       - ./server/apache2.conf:/etc/apache2/apache2.conf
       - ./server/php.ini:/usr/local/etc/php/php.ini
+      - ./letsencrypt:/etc/letsencrypt
 
   mariadb:
     image: mariadb
