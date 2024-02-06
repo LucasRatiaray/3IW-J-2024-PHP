@@ -4,13 +4,11 @@ services:
     build: site
     ports:
       - "80:80"
-      - "443:443"
     volumes:
       - ./www:/var/www/html/
-      - ./server/lucasratiaray.fr.conf:/etc/apache2/sites-available/lucasratiaray.fr.conf
+      - ./server/000-default.conf:/etc/apache2/sites-available/000-default.conf
       - ./server/apache2.conf:/etc/apache2/apache2.conf
       - ./server/php.ini:/usr/local/etc/php/php.ini
-      - ./letsencrypt:/etc/letsencrypt
 
   mariadb:
     image: mariadb
